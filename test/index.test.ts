@@ -31,7 +31,7 @@ describe('presetDuo', () => {
       /* layer: dark-theme */
       .light ,:root{--dark-var-like:253 79 55;--dark-var-link:86 123 148;--dark-var-button-second:242 242 242;}
       /* layer: dark-theme-dark */
-      .dark {--dark-var-link:91 119 164;--dark-var-button-second:43 43 43;}
+      .dark {--dark-var-like:253 79 55;--dark-var-link:91 119 164;--dark-var-button-second:43 43 43;}
       /* layer: default */
       .bg-like{--un-bg-opacity:1;background-color:rgb(var(--dark-var-like) / var(--un-bg-opacity));}
       .hover\\:bg-button-second:hover{--un-bg-opacity:1;background-color:rgb(var(--dark-var-button-second) / var(--un-bg-opacity));}

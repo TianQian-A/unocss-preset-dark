@@ -80,7 +80,11 @@ const presetDark = definePreset<PresetDarkOptions, Theme>((options = {}) => {
       }
       else {
         const { colorStr } = addThemeVars(name, value, 'DEFAULT')
-        result[name] = colorStr
+        const { colorStr: colorStr2 } = addThemeVars(name, value, 'DEFAULT_DARK')
+        result[name] = {
+          DEFAULT: colorStr,
+          DEFAULT_DARK: colorStr2,
+        }
       }
       return {
         ...acc,
