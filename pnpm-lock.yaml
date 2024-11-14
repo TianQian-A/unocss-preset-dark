@@ -5,11 +5,10 @@ settings:
   excludeLinksFromLockfile: false
 
 importers:
-
   .:
     dependencies:
       '@unocss/core':
-        specifier: ^0.63.4
+        specifier: '>= 0.63.4 <1'
         version: 0.63.4
       '@unocss/rule-utils':
         specifier: ^0.63.4

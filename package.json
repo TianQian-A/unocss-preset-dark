@@ -47,8 +47,10 @@
     "typecheck": "tsc --noEmit",
     "prepare": "simple-git-hooks"
   },
+  "peerDependencies": {
+    "@unocss/core": ">= 0.63.4 <1"
+  },
   "dependencies": {
-    "@unocss/core": "^0.63.4",
     "@unocss/rule-utils": "^0.63.4",
     "color2k": "^2.0.3"
   },
