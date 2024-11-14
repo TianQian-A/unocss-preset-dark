@@ -28,7 +28,7 @@ interface ThemeVar {
   DEFAULTAlpha?: number
 }
 
-const presetDark = definePreset<PresetDarkOptions, Theme>((options = {}) => {
+const presetDark = definePreset<PresetDarkOptions, object>((options = {}) => {
   const { varPrefix = DEFAULT_VAR_PREFIX, colors = {} } = options
   const themeVars = new Map<string, ThemeVar>()
   const touchedColors = new Set<string>()
