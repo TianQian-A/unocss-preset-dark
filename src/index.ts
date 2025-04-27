@@ -19,6 +19,10 @@ interface Theme {
 export interface PresetDarkOptions {
   varPrefix?: string
   colors?: ColorValue
+  /**
+   * default :root
+   */
+  selector?: string | string[]
 }
 
 interface ThemeVar {
@@ -29,7 +33,8 @@ interface ThemeVar {
 }
 
 const presetDark = definePreset<PresetDarkOptions, object>((options = {}) => {
-  const { varPrefix = DEFAULT_VAR_PREFIX, colors = {} } = options
+  const { varPrefix = DEFAULT_VAR_PREFIX, colors = {}, selector: defaultSelector = ':root' } = options
+  const formattedSelector = (Array.isArray(defaultSelector) ? defaultSelector : [defaultSelector]).join(',')
   const themeVars = new Map<string, ThemeVar>()
   const touchedColors = new Set<string>()
 
@@ -117,10 +122,10 @@ const presetDark = definePreset<PresetDarkOptions, object>((options = {}) => {
         const css = constructCSS(vars)
         let selector = ' '
         if (!isDark) {
-          selector = ',:root'
+          selector = `,${formattedSelector}`
         }
         if (css.includes('@media'))
-          selector = ':root'
+          selector = formattedSelector
         return {
           [symbols.selector]: () => selector,
           ...vars,
