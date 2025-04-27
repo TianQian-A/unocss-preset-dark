@@ -1,7 +1,7 @@
 {
   "name": "unocss-preset-dark",
   "type": "module",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "packageManager": "pnpm@9.9.0",
   "description": "Automatic switching dark CSS var for UnoCSS.",
   "author": "TianQian-A",
