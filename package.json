@@ -1,7 +1,7 @@
 {
   "name": "unocss-preset-dark",
   "type": "module",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "packageManager": "pnpm@9.9.0",
   "description": "Automatic switching dark CSS var for UnoCSS.",
   "author": "TianQian-A",
@@ -47,10 +47,8 @@
     "typecheck": "tsc --noEmit",
     "prepare": "simple-git-hooks"
   },
-  "peerDependencies": {
-    "@unocss/core": ">= 0.63.4 <1"
-  },
   "dependencies": {
+    "@unocss/core": "^0.63.4",
     "@unocss/rule-utils": "^0.63.4",
     "color2k": "^2.0.3"
   },
